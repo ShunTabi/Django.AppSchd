@@ -25,13 +25,14 @@ SECRET_KEY = ""
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["192.168.10.100", "localhost"]
+ALLOWED_HOSTS = ["localhost"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
     "AppSchd",
+    "AppBook",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -52,9 +53,9 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
-CORS_ORIGIN_WHITELIST = ("http://192.168.10.100:3000", "http://localhost:3000")  # 追加
+CORS_ORIGIN_WHITELIST = ( "http://localhost:3000")  # 追加
 
-CSRF_TRUSTED_ORIGINS = ["http://192.168.10.100:3000", "http://localhost:3000"]  # 追加
+CSRF_TRUSTED_ORIGINS = [ "http://localhost:3000"]  # 追加
 
 ROOT_URLCONF = "django_app.urls"
 
