@@ -3,6 +3,8 @@ from ..views.Record import Record
 from ..views.Prior import Prior
 from ..views.Schedule import Schedule
 from ..views.ToDo import ToDo
+from ..views.Bin import Bin
+from ..views.Note import Note
 
 urlpatterns = [
     #####################################################################################
@@ -71,6 +73,15 @@ urlpatterns = [
     path("ToDo/ToDoINSERT", ToDo.ToDoINSERT, name="ToDoINSERT"),
     path("ToDo/ToDoUPDATE", ToDo.ToDoUPDATE, name="ToDoUPDATE"),
     #####################################################################################
+    path("Bin/BinStorage", Bin.BinStorage, name="BinStorage"),
+    path("Bin/BinRecycle", Bin.BinRecycle, name="BinRecycle"),
+    #####################################################################################
     path("Prior/PriorItems", Prior.PriorItems, name="PriorItems"),
+    #####################################################################################
+    #####################################################################################
+    path("Note/NoteOneDay", Note.NoteOneDay, name="NoteOneDay"),
+    path("Note/NoteList", Note.NoteList, name="NoteList"),
+    path("Note/NoteINSERT", Note.NoteINSERT, name="NoteINSERT"),
+    path("Note/NoteUPDATE", Note.NoteUPDATE, name="NoteUPDATE"),
     #####################################################################################
 ]

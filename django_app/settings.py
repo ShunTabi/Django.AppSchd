@@ -32,6 +32,8 @@ ALLOWED_HOSTS = ["192.168.10.100", "localhost"]
 
 INSTALLED_APPS = [
     "AppSchd",
+    "AppBook",
+    "AppNote",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
