@@ -4,7 +4,10 @@ from ..views.Prior import Prior
 from ..views.Schedule import Schedule
 from ..views.ToDo import ToDo
 from ..views.Bin import Bin
+<<<<<<< HEAD
 from ..views.Note import Note
+=======
+>>>>>>> fc65522f7a2f97deb245599f5ceb31a093195c1a
 
 urlpatterns = [
     #####################################################################################
@@ -73,8 +76,13 @@ urlpatterns = [
     path("ToDo/ToDoINSERT", ToDo.ToDoINSERT, name="ToDoINSERT"),
     path("ToDo/ToDoUPDATE", ToDo.ToDoUPDATE, name="ToDoUPDATE"),
     #####################################################################################
+<<<<<<< HEAD
     path("Bin/BinStorage", Bin.BinStorage, name="BinStorage"),
     path("Bin/BinRecycle", Bin.BinRecycle, name="BinRecycle"),
+=======
+    path("Bin/StorageBin", Bin.StorageBin, name="StorageBin"),
+    path("Bin/RecycleBin", Bin.RecycleBin, name="RecycleBin"),
+>>>>>>> fc65522f7a2f97deb245599f5ceb31a093195c1a
     #####################################################################################
     path("Prior/PriorItems", Prior.PriorItems, name="PriorItems"),
     #####################################################################################
