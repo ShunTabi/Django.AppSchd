@@ -20,12 +20,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-zh3t3_suhyc2w4ooa+m=8y=)x3iykj$wy%f4@ecoik82&m3708"
+SECRET_KEY = ""
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["192.168.10.100", "localhost"]
+ALLOWED_HOSTS = [""]
 
 
 # Application definition
@@ -54,9 +54,9 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
-CORS_ORIGIN_WHITELIST = ("http://192.168.10.100:3000", "http://localhost:3000")  # 追加
+CORS_ORIGIN_WHITELIST = ("")  # 追加
 
-CSRF_TRUSTED_ORIGINS = ["http://192.168.10.100:3000", "http://localhost:3000"]  # 追加
+CSRF_TRUSTED_ORIGINS = [""]  # 追加
 
 ROOT_URLCONF = "django_app.urls"
 
