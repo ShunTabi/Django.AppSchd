@@ -4,10 +4,7 @@ from ..views.Prior import Prior
 from ..views.Schedule import Schedule
 from ..views.ToDo import ToDo
 from ..views.Bin import Bin
-<<<<<<< HEAD
 from ..views.Note import Note
-=======
->>>>>>> fc65522f7a2f97deb245599f5ceb31a093195c1a
 
 urlpatterns = [
     #####################################################################################
@@ -27,6 +24,16 @@ urlpatterns = [
         Record.RecordGenreUPDATE,
         name="RecordGenreUPDATE",
     ),
+    path(
+        "Record/RecordGenre/RecordGenreUPDATEVISIBLESTATUS",
+        Record.RecordGenreUPDATEVISIBLESTATUS,
+        name="RecordGenreUPDATEVISIBLESTATUS",
+    ),
+    path(
+        "Record/RecordGenre/RecordGenreDELETE",
+        Record.RecordGenreDELETE,
+        name="RecordGenreDELETE",
+    ),
     #####################################################################################
     path("Record/RecordGoal", Record.RecordGoal, name="RecordGoal"),
     path(
@@ -43,6 +50,16 @@ urlpatterns = [
         "Record/RecordGoal/RecordGoalUPDATE",
         Record.RecordGoalUPDATE,
         name="RecordGoalUPDATE",
+    ),
+    path(
+        "Record/RecordGoal/RecordGoalUPDATEVISIBLESTATUS",
+        Record.RecordGoalUPDATEVISIBLESTATUS,
+        name="RecordGoalUPDATEVISIBLESTATUS",
+    ),
+    path(
+        "Record/RecordGoal/RecordGoalDELETE",
+        Record.RecordGoalDELETE,
+        name="RecordPlanDELETE",
     ),
     #####################################################################################
     path("Record/RecordPlan", Record.RecordPlan, name="RecordPlan"),
@@ -61,6 +78,21 @@ urlpatterns = [
         Record.RecordPlanUPDATE,
         name="RecordPlanUPDATE",
     ),
+    path(
+        "Record/RecordPlan/RecordPlanUPDATEVISIBLESTATUS",
+        Record.RecordPlanUPDATEVISIBLESTATUS,
+        name="RecordPlanUPDATEVISIBLESTATUS",
+    ),
+    path(
+        "Record/RecordPlan/RecordPlanUPDATESTATUS",
+        Record.RecordPlanUPDATESTATUS,
+        name="RecordPlanUPDATESTATUS",
+    ),
+    path(
+        "Record/RecordPlan/RecordPlanDELETE",
+        Record.RecordPlanDELETE,
+        name="RecordPlanDELETE",
+    ),
     #####################################################################################
     path(
         "Schedule/ScheduleOneDay",
@@ -70,24 +102,37 @@ urlpatterns = [
     path("Schedule/ScheduleList", Schedule.ScheduleList, name="ScheduleList"),
     path("Schedule/ScheduleINSERT", Schedule.ScheduleINSERT, name="ScheduleINSERT"),
     path("Schedule/ScheduleUPDATE", Schedule.ScheduleUPDATE, name="ScheduleUPDATE"),
+    path(
+        "Schedule/ScheduleUPDATEVISIBLESTATUS",
+        Schedule.ScheduleUPDATEVISIBLESTATUS,
+        name="ScheduleUPDATEVISIBLESTATUS",
+    ),
+    path(
+        "Schedule/ScheduleUPDATESTATUS",
+        Schedule.ScheduleUPDATESTATUS,
+        name="ScheduleUPDATESTATUS",
+    ),
+    path("Schedule/ScheduleDELETE", Schedule.ScheduleDELETE, name="ScheduleDELETE"),
     #####################################################################################
     path("ToDo/ToDoToDo", ToDo.ToDoToDo, name="ToDoToDo"),
     path("ToDo/ToDoDone", ToDo.ToDoDone, name="ToDoDone"),
     path("ToDo/ToDoINSERT", ToDo.ToDoINSERT, name="ToDoINSERT"),
     path("ToDo/ToDoUPDATE", ToDo.ToDoUPDATE, name="ToDoUPDATE"),
+    path(
+        "ToDo/ToDoUPDATEVISIBLESTATUS",
+        ToDo.ToDoUPDATEVISIBLESTATUS,
+        name="ToDoUPDATEVISIBLESTATUS",
+    ),
+    path("ToDo/ToDoUPDATESTATUS", ToDo.ToDoUPDATESTATUS, name="ToDoUPDATESTATUS"),
+    path("ToDo/ToDoDELETE", ToDo.ToDoDELETE, name="ToDoDELETE"),
     #####################################################################################
-<<<<<<< HEAD
     path("Bin/BinStorage", Bin.BinStorage, name="BinStorage"),
     path("Bin/BinRecycle", Bin.BinRecycle, name="BinRecycle"),
-=======
-    path("Bin/StorageBin", Bin.StorageBin, name="StorageBin"),
-    path("Bin/RecycleBin", Bin.RecycleBin, name="RecycleBin"),
->>>>>>> fc65522f7a2f97deb245599f5ceb31a093195c1a
     #####################################################################################
     path("Prior/PriorItems", Prior.PriorItems, name="PriorItems"),
     #####################################################################################
     #####################################################################################
-    path("Note/NoteOneDay", Note.NoteOneDay, name="NoteOneDay"),
+    path("Note/NoteRecord", Note.NoteRecord, name="NoteRecord"),
     path("Note/NoteList", Note.NoteList, name="NoteList"),
     path("Note/NoteINSERT", Note.NoteINSERT, name="NoteINSERT"),
     path("Note/NoteUPDATE", Note.NoteUPDATE, name="NoteUPDATE"),
